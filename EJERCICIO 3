@@ -1,0 +1,21 @@
+class Vehiculo:
+    def _init_(self, marca, anio):
+        self.marca = marca
+        self.anio = anio
+    
+    def imprimir_informacion(self):
+        print(f"Marca: {self.marca}, Año: {self.anio}")
+
+class Coche(Vehiculo):
+    def _init_(self, marca, anio, modelo):
+        super()._init_(marca, anio)
+        self.modelo = modelo
+    
+    def imprimir_modelo(self):
+        print(f"Modelo: {self.modelo}")
+
+mi_coche = Coche("Toyota", 2022, "Corolla")
+
+mi_coche.imprimir_informacion()
+
+mi_coche.imprimir_modelo()
